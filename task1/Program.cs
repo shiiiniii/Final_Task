@@ -1,15 +1,6 @@
 ﻿
-
-// Задача: Написать программу, которая из имеющегося массива строк формирует новый массив из строк,
-// длина которых меньше, либо равна 3 символам. Первоначальный массив можно ввести с клавиатуры,
-// либо задать на старте выполнения алгоритма. При решении не рекомендуется пользоваться коллекциями,
-// лучше обойтись исключительно массивами.
-// [“Hello”, “2”, “world”, “:-)”] → [“2”, “:-)”]
-// [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
-// [“Russia”, “Denmark”, “Kazan”] → []
-
 Console.Clear();
-Console.WriteLine("Программа, которая из 3х массивов слов и цифр: ( 1. Hello, 2, world, :-); 2. 1234, 1567, -2, computer science; 3. Russia, Denmark, Kazan)  выведет только те слова и цифры, которые состоят из трех или меньше символов."); 	
+Console.WriteLine("Программа, которая из 3х массивов слов и цифр выведет только те, которые состоят из трех или меньше символов."); 	
 string[] arr1 = {"Hello", "2", "world", ":-)"};
 string[] arr2 = {"1234", "1567", "-2", "computer science"};
 string[] arr3 = {"Russia", "Denmark", "Kazan"};
@@ -45,3 +36,27 @@ void PrintArray(string[] array)
 		Console.WriteLine();
 	}
 }
+
+
+Console.WriteLine();
+Console.WriteLine("Первый ряд слов:");
+PrintArray(arr1);
+string[] newArray1 = FindShortWordsInArray(arr1);
+Console.WriteLine();
+Console.WriteLine($"Удовлетворяющие условию (3 символа или меньше): ");
+PrintArray(newArray1);
+	
+Console.WriteLine();
+Console.WriteLine("Второй ряд слов:");
+PrintArray(arr2);
+string[] newArray2 = FindShortWordsInArray(arr2);
+Console.WriteLine();
+Console.WriteLine($"Удовлетворяющие условию (3 символа или меньше): ");
+PrintArray(newArray2);
+
+Console.WriteLine();
+Console.WriteLine("Третий ряд слов:");
+PrintArray(arr3);
+string[] newArray3 = FindShortWordsInArray(arr3);
+Console.WriteLine();
+PrintArray(newArray3);
